@@ -266,6 +266,6 @@ declare namespace MagAPP {
 
 }
 
-declare module 'magapp-jssdk-ts' {
+declare module 'magapp-jssdk' {
     export = MagAPP;
 }
