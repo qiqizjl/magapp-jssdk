@@ -1,13 +1,27 @@
 {
-  "name": "magapp-jssdk-ts",
-  "version": "1.0.0",
+  "name": "magapp-jssdk",
+  "version": "1.3.2-beta.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no teyarst specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiqizjl/magapp-jssdk.git"
+  },
+  "keywords": [
+    "magapp",
+    "jssdk",
+    "ts",
+    "typescript"
+  ],
+  "author": "耐小心 <qiqizjl@qq.com>",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qiqizjl/magapp-jssdk/issues"
+  },
+  "homepage": "https://github.com/qiqizjl/magapp-jssdk#readme",
   "devDependencies": {
     "ts-lint": "^4.5.1",
     "typescript": "^3.2.2"
