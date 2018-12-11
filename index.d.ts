@@ -159,7 +159,7 @@ declare namespace MagAPP {
      * @param actions 可选
      * @param callback 回调 index:选中的索引值
      */
-    function actionSheet(actions: string[], callback: (index: number) => void);
+    function actionSheet(actions: string[], callback: (index: number) => void):void;
 
     /**
      * toast提示
@@ -223,7 +223,7 @@ declare namespace MagAPP {
      * 设置导航颜色
      * @param color
      */
-    function setNavigationColor(color: string);
+    function setNavigationColor(color: string): void;
 
     /**
      * 隐藏导航栏右上角更多操作按钮
@@ -254,7 +254,7 @@ declare namespace MagAPP {
      * @param success 成功回调
      * @param fail 失败回调
      */
-    function alipay(payStr: string, success: (res: any) => void, fail: (res: any) => void);
+    function alipay(payStr: string, success: (res: any) => void, fail: (res: any) => void): void;
 
     /**
      * 调用支付
