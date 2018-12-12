@@ -81,7 +81,7 @@ interface PayConfig {
     }
     // 订单号
     orderNum: string;
-    // 联合订单男号
+    // 联合订单号
     unionOrderNum: string;
     // 支付类型
     type: string
