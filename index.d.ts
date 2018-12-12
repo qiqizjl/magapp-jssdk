@@ -79,6 +79,14 @@ interface PayConfig {
     type: string
 }
 
+// 唤起聊天
+interface ChatConfig {
+    // 用户id
+    user_id: string;
+    // 用户名
+    user_name: string;
+}
+
 declare namespace MagAPP {
 
     /**
@@ -159,7 +167,7 @@ declare namespace MagAPP {
      * @param actions 可选
      * @param callback 回调 index:选中的索引值
      */
-    function actionSheet(actions: string[], callback: (index: number) => void):void;
+    function actionSheet(actions: string[], callback: (index: number) => void): void;
 
     /**
      * toast提示
@@ -172,6 +180,24 @@ declare namespace MagAPP {
      * @param user_id 用户id
      */
     function toUserHome(user_id: string): void;
+
+    /**
+     * 根据用户名跳转个人中心
+     * @param user_name
+     */
+    function toUserHomeByName(user_name: string): void;
+
+    /**
+     * 获得可用的分享平台
+     * @param callback
+     */
+    function availableSharePlatform(callback: (res: object) => any): void;
+
+    /**
+     * 唤起聊天窗口
+     * @param config
+     */
+    function chat(config: ChatConfig): void;
 
     /**
      * 新窗口打开页面
@@ -250,7 +276,7 @@ declare namespace MagAPP {
 
     /**
      * 调用支付宝
-     * @param paySt 调用支付宝信息
+     * @param payStr  支付配置
      * @param success 成功回调
      * @param fail 失败回调
      */
