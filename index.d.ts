@@ -137,7 +137,7 @@ declare namespace MagAPP {
      * @param success 成功回调
      * @param error  失败回调
      */
-    function share(platform: SharePlatformList, success: (res: any) => void, error: (res: any) => void): void;
+    function share(platform: SharePlatformList, success: (res: object) => void, error: (res: object) => void): void;
 
     /**
      * 拍照
@@ -161,13 +161,13 @@ declare namespace MagAPP {
      * 获取经纬度
      * @param success 成功回调
      */
-    function getLocation(success: (res: any) => void): void;
+    function getLocation(success: (res: object) => void): void;
 
     /**
      * 调用手机地图获取位置信息
      * @param success 成功回调
      */
-    function mapPick(success: (res: any) => void): void;
+    function mapPick(success: (res: object) => void): void;
 
     /**
      * 扫二维码
@@ -220,7 +220,7 @@ declare namespace MagAPP {
      * 获得可用的分享平台
      * @param callback
      */
-    function availableSharePlatform(callback: (res: object) => any): void;
+    function availableSharePlatform(callback: (res: object) => void): void;
 
     /**
      * 打开外部应用
@@ -323,7 +323,7 @@ declare namespace MagAPP {
      * @param success 成功回调
      * @param fail 失败回调
      */
-    function alipay(payStr: string, success: (res: any) => void, fail: (res: any) => void): void;
+    function alipay(payStr: string, success: (res: object) => void, fail: (res: object) => void): void;
 
     /**
      * 调用支付
