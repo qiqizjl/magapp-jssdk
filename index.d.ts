@@ -1,3 +1,11 @@
+// 分享平台：(ALL)全部 WEIXIN(微信好友)WEIXIN_CIRCLE(微信朋友圈)QQ(QQ)QZONE(QQ空间)WEIBO(新浪)
+type SharePlatformList = "ALL"
+    | "WEIXIN"
+    | "WEIXIN_CIRCLE"
+    | "QQ"
+    | "QZONE"
+    | "WEIBO";
+
 // 页面设置配置
 interface setDataOptions {
     shareData?: {
@@ -85,6 +93,28 @@ interface ChatConfig {
     user_id: string;
     // 用户名
     user_name: string;
+}
+
+// 打开外部应用
+interface NewExternalWinConfig {
+    // 外部应用包名
+    package: string;
+}
+
+// 分享卡片
+interface ShareCardConfig {
+    // 分享标题
+    title: string;
+    // 分享图片
+    pic: string;
+    // 二维码对应的URL
+    url: string;
+    // 分享页面导航地址 默认"分享"
+    naviTitle?: string;
+    // 描述
+    des: string;
+    // 分享平台
+    platform: SharePlatformList;
 }
 
 declare namespace MagAPP {
@@ -192,6 +222,20 @@ declare namespace MagAPP {
      * @param callback
      */
     function availableSharePlatform(callback: (res: object) => any): void;
+
+    /**
+     * 打开外部应用
+     * @param config
+     */
+    function newExternalWin(config: NewExternalWinConfig): void;
+
+    /**
+     * 卡片分享
+     * @param config
+     * @param success
+     * @param fail
+     */
+    function shareCard(config: ShareCardConfig, success: (res: object) => void, fail: (res: object) => void): void;
 
     /**
      * 唤起聊天窗口
