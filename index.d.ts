@@ -134,11 +134,10 @@ declare namespace MagAPP {
     /**
      * 分享
      * @param platform 平台
-     *  分享平台：(ALL)全部 WEIXIN(微信好友)WEIXIN_CIRCLE(微信朋友圈)QQ(QQ)QZONE(QQ空间)WEIBO(新浪)
      * @param success 成功回调
      * @param error  失败回调
      */
-    function share(platform: string, success: (res: any) => void, error: (res: any) => void): void;
+    function share(platform: SharePlatformList, success: (res: any) => void, error: (res: any) => void): void;
 
     /**
      * 拍照
