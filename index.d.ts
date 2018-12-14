@@ -20,7 +20,7 @@ interface setDataOptions {
         // 分享类型 1=图片分享 默认URL
         type?: number
         // 若type=1 设置分享出去的图片
-        imageurl: string;
+        imageurl?: string;
     }
 }
 
